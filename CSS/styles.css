@@ -9,12 +9,12 @@
     margin-bottom: 150px;
 
     text-align: center;
-    color: cyan;
+    color: dimgray;
 }
 
 .author a {
 
-    color: cyan;
+    color: dimgray;
     text-decoration: none;
 }
 
@@ -56,15 +56,17 @@
 
     background-image: url("../images/bg-pattern-card.svg");
     text-align: center;
+    padding: 15px;
 }
 
 .profile-image img {
 
     border-radius: 100%;
     border: 5px solid white;
+    background-color: white;
 
     position: relative;
-    top: 53px;
+    top: 70px;
 }
 
 /* 
@@ -138,7 +140,7 @@
 
     position: absolute;
     top: -400px;
-    left: -300px;
+    left: -225px;
     z-index: 1;
 }
 
@@ -146,6 +148,60 @@
 
     position: absolute;
     bottom: -400px;
-    right: -300px;
+    right: -200px;
     z-index: 1;
+}
+
+/* 
+    Widening the card on lower resolution
+*/
+@media only screen and (max-width: 1000px) {
+
+    .card-container {
+        
+        width: 40%;
+    }
+}
+
+/* 
+    Widening the card on lower resolution
+*/
+@media only screen and (max-width: 700px) {
+
+    .card-container {
+        
+        width: 60%;
+    }
+}
+
+/* 
+    Media query for mobile size screen
+*/
+@media only screen and (max-width: 375px) {
+
+    .card-container {
+        
+        width: 90%;
+        margin-bottom: 100px;
+    }
+
+    .top-image {
+
+        height: 800px;
+        width: 900px;
+
+        position: absolute;
+        top: -300px;
+        left: -750px;
+    }
+    
+    .bottom-image {
+    
+        height: 800px;
+        width: 900px;
+
+        position: absolute;
+        bottom: -650px;
+        right: -750px;
+    }
 }
