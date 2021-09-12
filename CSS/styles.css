@@ -134,22 +134,62 @@
 }
 
 /* 
-    Absolutely positioning top and bottom circle images
+    Setting top circle as a background image
 */
 .top-image {
 
-    position: absolute;
-    top: -400px;
-    left: -225px;
-    z-index: 1;
-}
+    /* Setting background image and changing size */
+    background-image: url("../images/bg-pattern-top.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
 
+    /*  
+        Setting top image as a background with fixed position on the top, 
+        moved towards correct corner 
+    */
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-40%, -45%);
+
+    /* 
+        Changing the default size.
+
+        Height must be dependant on the width because when Chrome Dev Tools are added 
+        it changes the hight hence breaking the design.
+    */
+    height: 78vw; 
+    width: 83vw;
+        
+  }
+
+/* 
+    Setting bottom circle as a background image
+*/
 .bottom-image {
 
-    position: absolute;
-    bottom: -400px;
-    right: -200px;
-    z-index: 1;
+    /* Setting background image and changing size */
+    background-image: url("../images/bg-pattern-bottom.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    /*  
+        Setting top image as a background with fixed position on the top, 
+        moved towards correct corner 
+    */
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    transform: translate(35%, 60%);
+
+    /* 
+        Changing the default size.
+
+        Height must be dependant on the width because when Chrome Dev Tools are added 
+        it changes the hight hence breaking the design.
+    */
+     height: 78vw; 
+     width: 83vw;
 }
 
 /* 
@@ -164,7 +204,7 @@
 }
 
 /* 
-    Widening the card on lower resolution
+    Widening the card on lower resolution and modifying circles position
 */
 @media only screen and (max-width: 700px) {
 
@@ -172,6 +212,11 @@
         
         width: 60%;
     }
+
+    .top-image {
+
+        transform: translate(-40%, -24%);
+      }
 }
 
 /* 
@@ -187,21 +232,7 @@
 
     .top-image {
 
-        height: 800px;
-        width: 900px;
-
-        position: absolute;
-        top: -300px;
-        left: -750px;
-    }
-    
-    .bottom-image {
-    
-        height: 800px;
-        width: 900px;
-
-        position: absolute;
-        bottom: -650px;
-        right: -750px;
-    }
+        transform: translate(-30%, -5%);
+      }
+   
 }
