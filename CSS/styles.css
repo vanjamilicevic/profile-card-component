@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+/*
+    Styling Author part of the page (not related to Testimonials assignment)
+*/
+.author {
+
+    margin-top: 30px;
+    margin-bottom: 150px;
+
+    text-align: center;
+    color: cyan;
+}
+
+.author a {
+
+    color: cyan;
+    text-decoration: none;
+}
+
+/*
+    Main part of the page - card-container, contains all HTML elements neccessary to create profile card:
+    1. First section contains profile picture
+    2. Second section contains profile name, age, location
+    3. Third section contains information on person's number of followers, likes and photos
+*/
+.card-container {
+
+    /* Setting shape, size, alignment and coloring */
+    border-radius: 15px;
+    box-shadow: 0px 0px 7px 0px rgba(105,105,105,1);
+    background-color: white;
+    width: 20%;
+    margin: auto;
+    
+    /* Setting font for the entire main part of the page */
+    font-family: "Kumbh Sans";
+    
+    /* 
+        - Setting overflow (In order to have rounded edges for child background image)
+        - Setting relative position and z-index in order to display card on top of background circles 
+    */
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+
+/* 
+    Styling profile image container: 
+    - Setting overall background
+    - Aligning image itself to the center
+    - Moving profile picture from the top
+    - Making profile picture have circular shape
+*/
+.profile-image {
+
+    background-image: url("../images/bg-pattern-card.svg");
+    text-align: center;
+}
+
+.profile-image img {
+
+    border-radius: 100%;
+    border: 5px solid white;
+
+    position: relative;
+    top: 53px;
+}
+
+/* 
+    Profile details is a section containing one paragraph which is split in three parts:
+    - Name
+    - Age
+    - Location
+*/
+.profile-details {
+
+    text-align: center;
+    margin-top: 70px;
+    margin-bottom: 30px;
+}
+
+.name {
+
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.age {
+
+    color:hsl(0, 0%, 59%);
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.location {
+
+    font-size: 14px;
+    color:hsl(0, 0%, 59%);
+    margin-top: 12px;
+    display: block;
+}
+
+/* 
+    Profile numbers section is a flexbox containing three paragraphs, each paragraph have two parts:
+    1. Value (e.g. 80K)
+    2. Type (e.g. Followers)
+*/
+.profile-numbers {
+
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+
+    padding: 25px;
+    border-top: 1px solid hsl(0, 0%, 85%);
+}
+
+.value {
+
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.type {
+
+    font-size: 10px;
+    color:hsl(0, 0%, 59%);
+
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+
+/* 
+    Absolutely positioning top and bottom circle images
+*/
+.top-image {
+
+    position: absolute;
+    top: -400px;
+    left: -300px;
+    z-index: 1;
+}
+
+.bottom-image {
+
+    position: absolute;
+    bottom: -400px;
+    right: -300px;
+    z-index: 1;
+}

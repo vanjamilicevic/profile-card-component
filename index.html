@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+
+    <!-- Setting code schema, taking care of user device and linking styles -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="CSS/globals.css">
+    <link rel="stylesheet" href="CSS/styles.css">
+
+    <!-- Setting favicon and page title -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <title>Profile card component</title>
+  </head>
+
+  <body>
+    <div class="author">Coded by <a href="https://github.com/vanjamilicevic">ValentinaM</a>.</div>
+
+    <!-- 
+      Main part of the page consists of three sections:
+      - First section contains profile picture
+      - Second section contains profile name, age, location
+      - Third section contains information on person's number of followers, likes and photos
+     -->
+    <main class="card-container">
+
+      <!-- Profile image section -->
+      <section class="profile-image">
+        <img src="images/image-victor.jpg" alt="Image of Victor">
+      </section>
+
+      <!-- Profile details section -->
+      <section class="profile-details">
+        <p>
+          <span class="name">Victor Crest</span>
+          <span class="age">26</span>
+          <br>
+          <span class="location">London</span>
+        </p>
+      </section>
+
+      <!-- Profile numbers section -->
+      <section class="profile-numbers">
+        <p>
+          <span class="value">80K</span>
+          <br>
+          <span class="type">Followers</span>
+        </p>
+        <p>
+          <span class="value">803K</span>
+          <br>
+          <span class="type">Likes</span>
+        </p>
+        <p>
+          <span class="value">1.4K</span>
+          <br>
+          <span class="type">Photos</span>
+        </p>
+      </section>
+
+    </main>
+
+    <!-- Top and bottom circle images -->
+    <img class="top-image" src="images/bg-pattern-top.svg" alt="Top circle">
+    <img class="bottom-image" src="images/bg-pattern-bottom.svg" alt="Bottom circle">
+
+  </body>
+</html>
