@@ -364,10 +364,3 @@ textarea {
     padding: 0.2em 0;
 }
 
-/*
-    Setting default background
-*/
-body {
-    background-color: hsl(185, 75%, 39%);
-    overflow: hidden;
-}
